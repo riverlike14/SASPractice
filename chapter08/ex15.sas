@@ -1,0 +1,3 @@
+PROC DATASETS LIBRARY=mysas NOLIST;
+	APPEND BASE=mysas.female DATA=mysas.male FORCE;
+RUN;

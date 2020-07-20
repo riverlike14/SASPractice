@@ -1,0 +1,10 @@
+DATA mysas.survey;
+	INFILE ".\Documents\My SAS Files\survey.txt";
+	DO age=10 TO 50 BY 10;
+		DO sex="Female", "Male";
+			INPUT size response @@;
+			OUTPUT;
+		END;
+	END;
+	LABEL age="연령" sex="성별" size="표본수" response="응답수";
+RUN;

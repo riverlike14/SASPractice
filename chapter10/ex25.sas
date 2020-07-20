@@ -1,0 +1,12 @@
+PROC TEMPLATE;
+	DEFINE STATGRAPH surface;
+		BEGINGRAPH;
+			LAYOUT OVERLAY3D;
+				SURFACEPLOTPARM X=height Y=weight Z=density;
+			ENDLAYOUT;
+		ENDGRAPH;
+	END;
+RUN;
+
+PROC SGRENDER DATA=sashelp.gridded TEMPLATE=surface;
+RUN;
